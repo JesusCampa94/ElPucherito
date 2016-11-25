@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GgesGenNHibernate"
+		                   namespace="GgesGenNHibernate.EN.Gges">
+		    
+		    
+			
+				<class name="ComentarioEN" table="Comentario"> 
+				  	
+						<id name="Id" column="id" type="integer"> 
+							<generator class="hilo"/>
+						</id>
+			
+					
+					<property name="Contenido" type="string"> 
+						<column name="contenido"  not-null="true"/>
+					</property>
+					<property name="FechaCom" type="date"> 
+						<column name="fechaCom"  not-null="true"/>
+					</property>
+					<property name="Likes" type="integer"> 
+						<column name="likes"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+		  			
+						<many-to-one name="Publicacion" class="GgesGenNHibernate.EN.Gges.PublicacionEN" >	
+								<column name="FK_id_idPublicacion"/> 
+						</many-to-one>
+											 					
+			
+			
+		  			
+						<bag name="Comentario" cascade="delete">
+							<key>
+							
+								
+								<column name="FK_id_idComentario"/>
+					      	</key>
+							<one-to-many class="GgesGenNHibernate.EN.Gges.ComentarioEN"/>
+					    </bag>
+					
+			
+		  			
+						<many-to-one name="Comentario_0" class="GgesGenNHibernate.EN.Gges.ComentarioEN" >	
+								<column name="FK_id_idComentario"/> 
+						</many-to-one>
+											 					
+			
+		  			
+						<many-to-one name="Usuario" class="GgesGenNHibernate.EN.Gges.UsuarioEN" >	
+								<column name="FK_nick_idUsuario"/> 
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="ComentarioENReadAllHQL">from ComentarioEN</query>
+		</hibernate-mapping>
+	

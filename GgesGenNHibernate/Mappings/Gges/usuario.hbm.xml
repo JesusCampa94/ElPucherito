@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GgesGenNHibernate"
+		                   namespace="GgesGenNHibernate.EN.Gges">
+		    
+		    
+			
+				<class name="UsuarioEN" table="Usuario"> 
+						<id name="Nick" column="nick"/> 
+			
+					
+					<property name="Pass" type="string"> 
+						<column name="pass"  not-null="true"/>
+					</property>
+					<property name="Nombre" type="string"> 
+						<column name="nombre"  not-null="true"/>
+					</property>
+					<property name="Apellidos" type="string"> 
+						<column name="apellidos"  not-null="true"/>
+					</property>
+					<property name="Correo" type="string"> 
+						<column name="correo"  unique="true" not-null="true"/>
+					</property>
+					<property name="FechaNa" type="date"> 
+						<column name="fechaNa"  not-null="true"/>
+					</property>
+					<property name="Sexo" type="integer"> 
+						<column name="sexo"  not-null="true"/>
+					</property>
+					<property name="Pais" type="string"> 
+						<column name="pais"  not-null="true"/>
+					</property>
+					<property name="Provincia" type="string"> 
+						<column name="provincia"  not-null="true"/>
+					</property>
+					<property name="Imagen" type="string"> 
+						<column name="imagen"  not-null="true"/>
+					</property>
+					<property name="Baneado" type="boolean"> 
+						<column name="baneado"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		  			
+						<bag name="Publicacion" cascade="delete">
+							<key>
+							
+								
+								<column name="FK_nick_idUsuario"/>
+					      	</key>
+							<one-to-many class="GgesGenNHibernate.EN.Gges.PublicacionEN"/>
+					    </bag>
+					
+			
+		  			
+						<bag name="Comentario" cascade="delete">
+							<key>
+							
+								
+								<column name="FK_nick_idUsuario"/>
+					      	</key>
+							<one-to-many class="GgesGenNHibernate.EN.Gges.ComentarioEN"/>
+					    </bag>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		 </class>	
+		  
+		  <query name="UsuarioENReadAllHQL">from UsuarioEN</query>
+		  <query name="UsuarioENusuarioPorEmailHQL"><![CDATA[FROM UsuarioEN WHERE correo = :p_email]]></query>
+		  <query name="UsuarioENPuntuacionMediaComentariosHQL"><![CDATA[SELECT avg(com.Likes) FROM UsuarioEN as usuario inner join usuario.Comentario as com  WHERE usuario.Nick  = :p_nick]]></query>
+		  <query name="UsuarioENMediaLikesPublicacionesHQL"><![CDATA[SELECT avg(publ.Likes) FROM PublicacionEN as publ inner join publ.Usuario as usu WHERE usu.Nick = :nick]]></query>
+		</hibernate-mapping>
+	

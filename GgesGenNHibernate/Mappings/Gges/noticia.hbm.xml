@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GgesGenNHibernate"
+		                   namespace="GgesGenNHibernate.EN.Gges">
+		    
+		    
+			
+				
+<joined-subclass name="NoticiaEN" extends="GgesGenNHibernate.EN.Gges.PublicacionEN" table="Noticia"> 
+	<key>
+    	
+				<column name="id"/>
+		
+    	
+   	</key>
+
+			
+					
+			
+		
+ 	  
+		 </joined-subclass>
+		  
+		  <query name="NoticiaENReadAllHQL">from NoticiaEN</query>
+		  <query name="NoticiaENNoticiasOrdenInversoHQL"><![CDATA[FROM NoticiaEN ORDER BY  fechaCrea ASC]]></query>
+		</hibernate-mapping>
+	

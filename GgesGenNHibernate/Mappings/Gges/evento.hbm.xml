@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GgesGenNHibernate"
+		                   namespace="GgesGenNHibernate.EN.Gges">
+		    
+		    
+			
+				
+<joined-subclass name="EventoEN" extends="GgesGenNHibernate.EN.Gges.PublicacionEN" table="Evento"> 
+	<key>
+    	
+				<column name="id"/>
+		
+    	
+   	</key>
+
+			
+					
+					<property name="Lugar" type="string"> 
+						<column name="lugar"  not-null="true"/>
+					</property>
+			
+			
+					
+		
+ 	  
+		 </joined-subclass>
+		  
+		  <query name="EventoENReadAllHQL">from EventoEN</query>
+		  <query name="EventoENEventosOrdenInversoHQL"><![CDATA[FROM EventoEN ORDER BY  fechaCrea ASC]]></query>
+		</hibernate-mapping>
+	
