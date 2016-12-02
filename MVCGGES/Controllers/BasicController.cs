@@ -8,7 +8,7 @@ using NHibernate;
 using GgesGenNHibernate.Exceptions;
 using GgesGenNHibernate.CAD.Gges;
 
-
+//hola que tal
 namespace MVCGGES.Controllers
 {
 public class BasicController: Controller
