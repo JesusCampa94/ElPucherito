@@ -1,0 +1,71 @@
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\hibernate.cfg.xml
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.pdb
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\Antlr3.Runtime.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\Iesi.Collections.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\log4net.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\nunit.core.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\nunit.framework.dll
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.pdb
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+C:\Users\manuel\Documents\SourceTree\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+E:\Repositorios\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\hibernate.cfg.xml
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.pdb
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.dll
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\Iesi.Collections.dll
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.dll
+E:\Repositorios\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.pdb
+E:\Repositorios\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+E:\Repositorios\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\hibernate.cfg.xml
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.pdb
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\Antlr3.Runtime.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\Iesi.Collections.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\log4net.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\nunit.core.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\nunit.framework.dll
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.pdb
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+C:\Users\manuel\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+E:\workspace\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+E:\workspace\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\hibernate.cfg.xml
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.exe
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\InitializeDB.pdb
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\Antlr3.Runtime.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\Castle.DynamicProxy2.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\Iesi.Collections.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\LinFu.DynamicProxy.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\log4net.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.Castle.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.ByteCode.LinFu.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\NHibernate.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\nunit.core.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\nunit.framework.dll
+E:\workspace\GGES\GgesGen\InitializeDB\bin\Debug\GgesGenNHibernate.pdb
+E:\workspace\GGES\GgesGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
+D:\Jesús\Documents\Repositorios\ElPucherito\InitializeDB\bin\Debug\InitializeDB.exe.config
+D:\Jesús\Documents\Repositorios\ElPucherito\InitializeDB\obj\x86\Debug\InitializeDB.exe
+D:\Jesús\Documents\Repositorios\ElPucherito\InitializeDB\obj\x86\Debug\InitializeDB.pdb
