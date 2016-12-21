@@ -1,0 +1,43 @@
+﻿@model GgesGenNHibernate.EN.Gges.ComentarioEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Likes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Likes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver", "Index")
+</p>
