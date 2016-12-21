@@ -17,7 +17,7 @@ namespace MVCGGES.Controllers
             IngredientesCAD cad = new IngredientesCAD(session);
 
             IList<IngredientesEN> lista = cad.ReadAllDefault(0, -1).ToList();
-
+            session.Close();
             return View(lista);
         }
 

@@ -1,5 +1,6 @@
 ﻿@model GgesGenNHibernate.EN.Gges.IngredientesEN
 
+
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -28,14 +29,14 @@
             @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(
-                model => model.Tipo, new SelectList(new List<Object>{
-                    new { value = 1 , text = "Fruta"  },
-                    new { value = 2 , text = "Verdura" },
-                    new { value = 3 , text = "Pescado"},
-                    new { value = 4 , text = "Carne"},
-                    new { value = 5 , text = "Cereal"},
-                    new { value = 6 , text = "Legumbre"},
-                    new { value = 7 , text = "Lacteo"}}, "value", "text", Model.Tipo))
+                    model => model.Receta, new SelectList(new List<Object>{
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.carne,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.cereal,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.fruta,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.lacteos,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.legumbre,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.pescado,
+                        GgesGenNHibernate.Enumerated.Gges.TipoIngredienteEnum.verdura }, Model.Receta))
                 @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
             </div>
         </div>
