@@ -18,10 +18,6 @@ int CrearReceta (RecetaEN receta);
 void CambiarReceta (RecetaEN receta);
 
 
-void BorrarReceta (int id
-                   );
-
-
 System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.RecetaEN> RecetasOrdenInverso ();
 }
 }

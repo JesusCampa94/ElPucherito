@@ -21,21 +21,21 @@ public partial class ComentarioCEN
 {
 public void DarLikes (int p_oid)
 {
-            /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Comentario_darLikes) ENABLED START*/
+        /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Comentario_darLikes) ENABLED START*/
 
-            ComentarioCAD comentarioCAD = new ComentarioCAD();
-            ComentarioEN comentarioEN = null;
+        ComentarioCAD comentarioCAD = new ComentarioCAD ();
+        ComentarioEN comentarioEN = null;
 
-            //obtenemos la publicacion con el oid pasado por parametro
-            comentarioEN = _IComentarioCAD.ReadOIDDefault(p_oid);
+        //obtenemos la publicacion con el oid pasado por parametro
+        comentarioEN = _IComentarioCAD.ReadOIDDefault (p_oid);
 
-            //subimos un like a la publicacion
-            comentarioEN.Likes = comentarioEN.Likes + 1;
+        //subimos un like a la publicacion
+        comentarioEN.Likes = comentarioEN.Likes + 1;
 
-            comentarioCAD.ModificarComentario(comentarioEN);
+        comentarioCAD.ModificarComentario (comentarioEN);
 
 
-            /*PROTECTED REGION END*/
-        }
+        /*PROTECTED REGION END*/
+}
 }
 }

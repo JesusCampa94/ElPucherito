@@ -18,10 +18,6 @@ int CrearEntrevista (EntrevistaEN entrevista);
 void CambiarEntrevista (EntrevistaEN entrevista);
 
 
-void BorrarEntrevista (int id
-                       );
-
-
 System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EntrevistaEN> EntrevistasOrdenInverso ();
 }
 }

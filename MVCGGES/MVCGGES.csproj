@@ -44,9 +44,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.5\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -84,6 +96,21 @@
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -197,8 +224,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BasicController.cs" />
+    <Compile Include="Controllers\EntrevistaController.cs" />
+    <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\RecetaController.cs" />
     <Compile Include="Controllers\UsuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -281,10 +313,30 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Usu\Index.cshtml" />
+    <Content Include="Views\Receta\Index.cshtml" />
+    <Content Include="Views\Receta\Delete.cshtml" />
+    <Content Include="Views\Receta\Create.cshtml" />
+    <Content Include="Views\Receta\Edit.cshtml" />
+    <Content Include="Views\Receta\Details.cshtml" />
+    <Content Include="Views\Noticia\Index.cshtml" />
+    <Content Include="Views\Noticia\Details.cshtml" />
+    <Content Include="Views\Noticia\Create.cshtml" />
+    <Content Include="Views\Noticia\Edit.cshtml" />
+    <Content Include="Views\Noticia\Delete.cshtml" />
+    <Content Include="Views\Evento\Index.cshtml" />
+    <Content Include="Views\Evento\Details.cshtml" />
+    <Content Include="Views\Evento\Create.cshtml" />
+    <Content Include="Views\Evento\Edit.cshtml" />
+    <Content Include="Views\Evento\Delete.cshtml" />
+    <Content Include="Views\Entrevista\Index.cshtml" />
+    <Content Include="Views\Entrevista\Details.cshtml" />
+    <Content Include="Views\Entrevista\Create.cshtml" />
+    <Content Include="Views\Entrevista\Edit.cshtml" />
+    <Content Include="Views\Entrevista\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Usu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -312,7 +364,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60313</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

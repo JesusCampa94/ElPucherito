@@ -18,10 +18,6 @@ int CrearEvento (EventoEN evento);
 void CambiarEvento (EventoEN evento);
 
 
-void BorrarEvento (int id
-                   );
-
-
 System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EventoEN> EventosOrdenInverso ();
 }
 }

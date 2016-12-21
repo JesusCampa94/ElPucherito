@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,35 +36,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
-      <HintPath>..\GgesGenNHibernate\AppLib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Castle.DynamicProxy2">
-      <HintPath>..\GgesGenNHibernate\AppLib\Castle.DynamicProxy2.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Castle.DynamicProxy2.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections">
-      <HintPath>..\GgesGenNHibernate\AppLib\Iesi.Collections.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="LinFu.DynamicProxy">
-      <HintPath>..\GgesGenNHibernate\AppLib\LinFu.DynamicProxy.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\LinFu.DynamicProxy.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
-      <HintPath>..\GgesGenNHibernate\AppLib\log4net.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
-      <HintPath>..\GgesGenNHibernate\AppLib\NHibernate.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.ByteCode.Castle">
-      <HintPath>..\GgesGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.ByteCode.LinFu">
-      <HintPath>..\GgesGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
     </Reference>
     <Reference Include="nunit.core">
-      <HintPath>..\GgesGenNHibernate\AppLib\nunit.core.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\nunit.core.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GgesGenNHibernate\AppLib\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Universidad Manuel\3º Curso\1º Cuatrimestre\DSM\REPETIDO\Ejemplo ASP_MVC\EjemploDSMGenNHibernate\AppLib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="CreateDB.cs"/>
+    <Compile Include="CreateDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

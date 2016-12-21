@@ -92,12 +92,6 @@ public void CambiarEntrevista (int p_Entrevista_OID, string p_titulo, System.Col
         _IEntrevistaCAD.CambiarEntrevista (entrevistaEN);
 }
 
-public void BorrarEntrevista (int id
-                              )
-{
-        _IEntrevistaCAD.BorrarEntrevista (id);
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EntrevistaEN> EntrevistasOrdenInverso ()
 {
         return _IEntrevistaCAD.EntrevistasOrdenInverso ();

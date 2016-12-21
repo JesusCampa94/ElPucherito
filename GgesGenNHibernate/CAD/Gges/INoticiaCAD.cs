@@ -15,13 +15,6 @@ void ModifyDefault (NoticiaEN noticia);
 
 int CrearNoticia (NoticiaEN noticia);
 
-void CambiarNoticia (NoticiaEN noticia);
-
-
-void BorrarNoticia (int id
-                    );
-
-
 System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.NoticiaEN> NoticiasOrdenInverso ();
 }
 }

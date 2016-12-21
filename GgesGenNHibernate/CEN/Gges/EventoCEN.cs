@@ -92,12 +92,6 @@ public void CambiarEvento (int p_Evento_OID, string p_titulo, System.Collections
         _IEventoCAD.CambiarEvento (eventoEN);
 }
 
-public void BorrarEvento (int id
-                          )
-{
-        _IEventoCAD.BorrarEvento (id);
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EventoEN> EventosOrdenInverso ()
 {
         return _IEventoCAD.EventosOrdenInverso ();

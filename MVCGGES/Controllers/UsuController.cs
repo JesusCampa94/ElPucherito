@@ -15,14 +15,16 @@ namespace MVCGGES.Controllers
         // GET: Usu
         public ActionResult Index()
         {
-            UsuarioCAD cad = new UsuarioCAD();
-            UsuarioCEN cen = new UsuarioCEN();
+        
+            //UsuarioCEN cen = new UsuarioCEN();
 
             SessionInitialize();
+            UsuarioCAD cad = new UsuarioCAD(session);
 
-            IList<UsuarioEN> lista = cad;
+            IList<UsuarioEN> lista = cad.ReadAllDefault(0, -1).ToList();
 
-            return View();
+            SessionClose();
+            return View(lista);
         }
 
         // GET: Usu/Details/5

@@ -160,14 +160,11 @@
 			
 			
 			
-			
 	<Compile Include="EN\Gges\NoticiaEN.cs" />
 	<Compile Include="CEN\Gges\NoticiaCEN.cs" />
 	<Compile Include="CAD\Gges\INoticiaCAD.cs" />
 	<Compile Include="CAD\Gges\NoticiaCAD.cs" />
 	<Compile Include="CP\Gges\NoticiaCP.cs" />
-			
-			
 			
 			
 	<Compile Include="EN\Gges\EventoEN.cs" />
@@ -178,13 +175,11 @@
 			
 			
 			
-			
 	<Compile Include="EN\Gges\EntrevistaEN.cs" />
 	<Compile Include="CEN\Gges\EntrevistaCEN.cs" />
 	<Compile Include="CAD\Gges\IEntrevistaCAD.cs" />
 	<Compile Include="CAD\Gges\EntrevistaCAD.cs" />
 	<Compile Include="CP\Gges\EntrevistaCP.cs" />
-			
 			
 			
 			
