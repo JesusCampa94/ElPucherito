@@ -57,8 +57,8 @@ namespace MVCGGES.Controllers
                 usuario.Nombre = datosRegistro.Nombre;
                 usuario.Apellidos = datosRegistro.Apellidos;
                 usuario.Correo = datosRegistro.Email;
+                usuario.FechaNa = datosRegistro.FechaNa;
                 usuario.Sexo = datosRegistro.Sexo;
-                //usuario.Sexo = 0;
                 usuario.Pais = datosRegistro.Pais;
                 usuario.Provincia = datosRegistro.Provincia;
                 usuario.Imagen = datosRegistro.Imagen;
