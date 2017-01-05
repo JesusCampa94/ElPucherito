@@ -34,7 +34,7 @@ namespace MVCGGES.Controllers
         public ActionResult Create()
         {
             AdministradorEN en = new AdministradorEN();
-
+            en.Sexo = 0;
             return View(en);
         }
 
@@ -45,6 +45,7 @@ namespace MVCGGES.Controllers
             try
             {
                 AdministradorCAD cad = new AdministradorCAD();
+                en.Baneado = false;
                 cad.CrearAdministrador(en);
 
                 return RedirectToAction("Index");
