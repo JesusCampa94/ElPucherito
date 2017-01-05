@@ -39,6 +39,20 @@ namespace MVCGGES.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class EditAccountDataViewModel
+    {
+        [Required]
+        [Display(Name = "Nick")]
+        public string Nick { get; set; }
+
+
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Correo electrónico")]
+        public string Email { get; set; }
+    }
+
     public class ChangePasswordViewModel
     {
         [Required]

@@ -2,6 +2,7 @@
 using GgesGenNHibernate.CEN.Gges;
 using GgesGenNHibernate.EN.Gges;
 using MVCGGES.Controllers;
+using MVCGGES.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,35 +16,67 @@ namespace MVCGGES.Controllers
         // GET: Usu
         public ActionResult Index()
         {
-            UsuarioCAD cad = new UsuarioCAD();
-            UsuarioCEN cen = new UsuarioCEN();
+           SessionInitialize();
 
-            SessionInitialize();
+            UsuarioCAD cad = new UsuarioCAD(session);
+            IList<UsuarioEN> listaUsuarios = cad.ReadAllDefault(0, -1).ToList();
 
-            IList<UsuarioEN> lista = cad;
+            SessionClose();
 
-            return View();
+            return View(listaUsuarios);
         }
 
         // GET: Usu/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(String nick)
         {
-            return View();
+            UsuarioCAD cad = new UsuarioCAD();
+            UsuarioEN usuario = cad.ReadOIDDefault(nick);
+
+            return View(usuario);
         }
 
         // GET: Usu/Create
         public ActionResult Create()
         {
-            return View();
+            RegisterViewModel datosRegistro = new RegisterViewModel();
+            return View(datosRegistro);
         }
 
         // POST: Usu/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(RegisterViewModel datosRegistro)
         {
             try
             {
-                // TODO: Add insert logic here
+                UsuarioCAD cad = new UsuarioCAD();
+                UsuarioEN usuario = new UsuarioEN();
+
+                //Creamos el nuevo usuario con los datos obtenidos
+                usuario.Nick = datosRegistro.Nick;
+                usuario.Pass = datosRegistro.Password;
+                usuario.Nombre = datosRegistro.Nombre;
+                usuario.Apellidos = datosRegistro.Apellidos;
+                usuario.Correo = datosRegistro.Email;
+                usuario.Sexo = datosRegistro.Sexo;
+                //usuario.Sexo = 0;
+                usuario.Pais = datosRegistro.Pais;
+                usuario.Provincia = datosRegistro.Provincia;
+                usuario.Imagen = datosRegistro.Imagen;
+
+                //Valores por defecto de campos opcionales
+                if (datosRegistro.Imagen == "")
+                    usuario.Imagen = "imagen.jpg";
+
+                if (datosRegistro.Pais == "")
+                    usuario.Pais = "No especificado";
+
+                if (datosRegistro.Provincia == "")
+                    usuario.Provincia = "No especificada";
+                
+                //Valores que no introduce el usuario
+                usuario.Baneado = false;
+
+                cad.CrearUsuario(usuario);
 
                 return RedirectToAction("Index");
             }
@@ -54,18 +87,55 @@ namespace MVCGGES.Controllers
         }
 
         // GET: Usu/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string nick)
         {
-            return View();
+            UsuarioCAD cad = new UsuarioCAD();
+            UsuarioEN usuario = cad.ReadOIDDefault(nick);
+
+            return View(usuario);
         }
 
         // POST: Usu/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(UsuarioEN usuario)
         {
             try
             {
-                // TODO: Add update logic here
+                UsuarioCAD cad = new UsuarioCAD();
+
+                //Valores por defecto de campos opcionales
+                if (usuario.Imagen == "")
+                    usuario.Imagen = "imagen.jpg";
+
+                cad.CambiarDatos(usuario);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Usu/EditPass/5
+        public ActionResult EditPass(string nick)
+        {
+            ChangePasswordViewModel cambioPass = new ChangePasswordViewModel();
+
+            return View(cambioPass);
+        }
+
+        // POST: Usu/EditPass/5
+        [HttpPost]
+        public ActionResult EditPass(string nick, ChangePasswordViewModel cambioPass)
+        {
+            try
+            {
+                UsuarioCAD cad = new UsuarioCAD();
+                UsuarioEN usuario = cad.ReadOIDDefault(nick);
+
+                usuario.Pass = cambioPass.NewPassword;
+                cad.CambiarDatos(usuario);
 
                 return RedirectToAction("Index");
             }
@@ -76,18 +146,22 @@ namespace MVCGGES.Controllers
         }
 
         // GET: Usu/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string nick)
         {
-            return View();
+            UsuarioCAD cad = new UsuarioCAD();
+            UsuarioEN usuario = cad.ReadOIDDefault(nick);
+
+            return View(usuario);
         }
 
         // POST: Usu/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(UsuarioEN usuario)
         {
             try
             {
-                // TODO: Add delete logic here
+                UsuarioCAD cad = new UsuarioCAD();
+                cad.BorrarUsuario(usuario.Nick);
 
                 return RedirectToAction("Index");
             }

@@ -65,9 +65,8 @@ namespace MVCGGES.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
-        [Display(Name = "Correo electrónico")]
-        public string Email { get; set; }
+        [Display(Name = "Nick")]
+        public string Nick { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
@@ -79,6 +78,38 @@ namespace MVCGGES.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Nombre")]
+        public string Nombre { get; set; }
+
+        [Required]
+        [Display(Name = "Apellidos")]
+        public string Apellidos { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Correo electrónico")]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.DateTime)]
+        [Display(Name = "Fecha de nacimiento")]
+        public System.DateTime FechaNa { get; set; }
+
+        [Required]
+        [Display(Name = "Sexo")]
+        public int Sexo { get; set; }
+
+        [Display (Name = "País")]
+        public string Pais { get; set; }
+
+        [Display(Name = "Provincia")]
+        public string Provincia { get; set; }
+
+        public string Imagen { get; set; }
+
+        public bool Baneado { get; set; }
     }
 
     public class ResetPasswordViewModel
