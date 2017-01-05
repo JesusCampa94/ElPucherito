@@ -1,6 +1,5 @@
 ﻿using GgesGenNHibernate.CAD.Gges;
 using GgesGenNHibernate.EN.Gges;
-using MVCGGES.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,45 +33,20 @@ namespace MVCGGES.Controllers
         // GET: Admin/Create
         public ActionResult Create()
         {
-            RegisterViewModel datosRegistro = new RegisterViewModel();
-            return View(datosRegistro);
+            AdministradorEN en = new AdministradorEN();
+            en.Sexo = 0;
+            return View(en);
         }
 
         // POST: Admin/Create
         [HttpPost]
-        public ActionResult Create(RegisterViewModel datosRegistro)
+        public ActionResult Create(AdministradorEN en)
         {
             try
             {
                 AdministradorCAD cad = new AdministradorCAD();
-                AdministradorEN admin = new AdministradorEN();
-
-                //Creamos el nuevo administrador con los datos obtenidos
-                admin.Nick = datosRegistro.Nick;
-                admin.Pass = datosRegistro.Password;
-                admin.Nombre = datosRegistro.Nombre;
-                admin.Apellidos = datosRegistro.Apellidos;
-                admin.Correo = datosRegistro.Email;
-                admin.FechaNa = datosRegistro.FechaNa;
-                admin.Sexo = datosRegistro.Sexo;
-                admin.Pais = datosRegistro.Pais;
-                admin.Provincia = datosRegistro.Provincia;
-                admin.Imagen = datosRegistro.Imagen;
-
-                //Valores por defecto de campos opcionales
-                if (datosRegistro.Imagen == "")
-                    admin.Imagen = "imagen.jpg";
-
-                if (datosRegistro.Pais == "")
-                    admin.Pais = "No especificado";
-
-                if (datosRegistro.Provincia == "")
-                    admin.Provincia = "No especificada";
-
-                //Valores que no introduce el admin
-                admin.Baneado = false;
-
-                cad.CrearAdministrador(admin);
+                en.Baneado = false;
+                cad.CrearAdministrador(en);
 
                 return RedirectToAction("Index");
             }
