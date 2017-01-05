@@ -91,12 +91,6 @@ public void CambiarReceta (int p_Receta_OID, string p_titulo, System.Collections
         _IRecetaCAD.CambiarReceta (recetaEN);
 }
 
-public void BorrarReceta (int id
-                          )
-{
-        _IRecetaCAD.BorrarReceta (id);
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.RecetaEN> RecetasOrdenInverso ()
 {
         return _IRecetaCAD.RecetasOrdenInverso ();

@@ -189,31 +189,6 @@ public void CambiarEntrevista (EntrevistaEN entrevista)
                 SessionClose ();
         }
 }
-public void BorrarEntrevista (int id
-                              )
-{
-        try
-        {
-                SessionInitializeTransaction ();
-                EntrevistaEN entrevistaEN = (EntrevistaEN)session.Load (typeof(EntrevistaEN), id);
-                session.Delete (entrevistaEN);
-                SessionCommit ();
-        }
-
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is GgesGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new GgesGenNHibernate.Exceptions.DataLayerException ("Error in EntrevistaCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EntrevistaEN> EntrevistasOrdenInverso ()
 {
         System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EntrevistaEN> result;

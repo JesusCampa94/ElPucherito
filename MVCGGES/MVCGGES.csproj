@@ -225,8 +225,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BasicController.cs" />
+    <Compile Include="Controllers\EntrevistaController.cs" />
+    <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\RecetaController.cs" />
     <Compile Include="Controllers\UsuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -315,6 +319,26 @@
     <Content Include="Views\Usu\EditPass.cshtml" />
     <Content Include="Views\Usu\Delete.cshtml" />
     <Content Include="Views\Usu\Details.cshtml" />
+    <Content Include="Views\Receta\Index.cshtml" />
+    <Content Include="Views\Receta\Delete.cshtml" />
+    <Content Include="Views\Receta\Create.cshtml" />
+    <Content Include="Views\Receta\Edit.cshtml" />
+    <Content Include="Views\Receta\Details.cshtml" />
+    <Content Include="Views\Noticia\Index.cshtml" />
+    <Content Include="Views\Noticia\Details.cshtml" />
+    <Content Include="Views\Noticia\Create.cshtml" />
+    <Content Include="Views\Noticia\Edit.cshtml" />
+    <Content Include="Views\Noticia\Delete.cshtml" />
+    <Content Include="Views\Evento\Index.cshtml" />
+    <Content Include="Views\Evento\Details.cshtml" />
+    <Content Include="Views\Evento\Create.cshtml" />
+    <Content Include="Views\Evento\Edit.cshtml" />
+    <Content Include="Views\Evento\Delete.cshtml" />
+    <Content Include="Views\Entrevista\Index.cshtml" />
+    <Content Include="Views\Entrevista\Details.cshtml" />
+    <Content Include="Views\Entrevista\Create.cshtml" />
+    <Content Include="Views\Entrevista\Edit.cshtml" />
+    <Content Include="Views\Entrevista\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -345,7 +369,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60313</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -3,10 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using GgesGenNHibernate.EN.Gges;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
-using GgesGenNHibernate.EN.Gges;
-
 
 namespace InitializeDB
 {

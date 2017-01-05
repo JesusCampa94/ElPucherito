@@ -189,31 +189,6 @@ public void CambiarEvento (EventoEN evento)
                 SessionClose ();
         }
 }
-public void BorrarEvento (int id
-                          )
-{
-        try
-        {
-                SessionInitializeTransaction ();
-                EventoEN eventoEN = (EventoEN)session.Load (typeof(EventoEN), id);
-                session.Delete (eventoEN);
-                SessionCommit ();
-        }
-
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is GgesGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new GgesGenNHibernate.Exceptions.DataLayerException ("Error in EventoCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EventoEN> EventosOrdenInverso ()
 {
         System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.EventoEN> result;

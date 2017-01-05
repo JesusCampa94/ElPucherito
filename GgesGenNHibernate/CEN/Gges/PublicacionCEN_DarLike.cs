@@ -21,22 +21,22 @@ public partial class PublicacionCEN
 {
 public void DarLike (int p_oid)
 {
-            /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Publicacion_darLike) ENABLED START*/
+        /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Publicacion_darLike) ENABLED START*/
 
-            PublicacionCAD publicacionCAD = new PublicacionCAD();
-            PublicacionEN publicacionEN = null;
-
-
-            //obtenemos la publicacion con el oid pasado por parametro
-            publicacionEN = _IPublicacionCAD.ReadOIDDefault(p_oid);
-
-            //subimos un like a la publicacion
-            publicacionEN.Likes++;
-
-            publicacionCAD.CambiarPublicacion(publicacionEN);
+        PublicacionCAD publicacionCAD = new PublicacionCAD ();
+        PublicacionEN publicacionEN = null;
 
 
-            /*PROTECTED REGION END*/
-        }
+        //obtenemos la publicacion con el oid pasado por parametro
+        publicacionEN = _IPublicacionCAD.ReadOIDDefault (p_oid);
+
+        //subimos un like a la publicacion
+        publicacionEN.Likes++;
+
+        publicacionCAD.CambiarPublicacion (publicacionEN);
+
+
+        /*PROTECTED REGION END*/
+}
 }
 }

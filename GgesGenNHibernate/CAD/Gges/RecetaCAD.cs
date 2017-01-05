@@ -190,31 +190,6 @@ public void CambiarReceta (RecetaEN receta)
                 SessionClose ();
         }
 }
-public void BorrarReceta (int id
-                          )
-{
-        try
-        {
-                SessionInitializeTransaction ();
-                RecetaEN recetaEN = (RecetaEN)session.Load (typeof(RecetaEN), id);
-                session.Delete (recetaEN);
-                SessionCommit ();
-        }
-
-        catch (Exception ex) {
-                SessionRollBack ();
-                if (ex is GgesGenNHibernate.Exceptions.ModelException)
-                        throw ex;
-                throw new GgesGenNHibernate.Exceptions.DataLayerException ("Error in RecetaCAD.", ex);
-        }
-
-
-        finally
-        {
-                SessionClose ();
-        }
-}
-
 public System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.RecetaEN> RecetasOrdenInverso ()
 {
         System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.RecetaEN> result;

@@ -21,23 +21,21 @@ public partial class UsuarioCEN
 {
 public string RecuperarContra (string p_oid, string p_correo)
 {
-            /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Usuario_recuperarContra) ENABLED START*/
+        /*PROTECTED REGION ID(GgesGenNHibernate.CEN.Gges_Usuario_recuperarContra) ENABLED START*/
 
-            string auxiliar = "Usuario no registrado";
-            if (p_oid != null && p_correo != null)
-            {
-                UsuarioEN usuarioEN = _IUsuarioCAD.ReadOIDDefault(p_oid);
-                if (usuarioEN != null)
-                {
-                    if (usuarioEN.Correo.Equals(p_correo)) //comprobar que el correo es el correcto
-                        auxiliar = usuarioEN.Pass;
+        string auxiliar = "Usuario no registrado";
+
+        if (p_oid != null && p_correo != null) {
+                UsuarioEN usuarioEN = _IUsuarioCAD.ReadOIDDefault (p_oid);
+                if (usuarioEN != null) {
+                        if (usuarioEN.Correo.Equals (p_correo)) //comprobar que el correo es el correcto
+                                auxiliar = usuarioEN.Pass;
                 }
-
-            }
-            return auxiliar;
-
-
-            /*PROTECTED REGION END*/
         }
-    }
+        return auxiliar;
+
+
+        /*PROTECTED REGION END*/
+}
+}
 }
