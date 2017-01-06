@@ -38,10 +38,10 @@ public void BanearUsuario (string usuario)
 
                 if (usuarioEN != null) {
                         if (usuarioEN.Baneado == false) {
-                                usuarioCEN.CambiarDatos (usuarioEN.Nick, usuarioEN.Pass, usuarioEN.Nombre, usuarioEN.Apellidos, usuarioEN.Correo, usuarioEN.FechaNa, usuarioEN.Sexo, usuarioEN.Pais, usuarioEN.Provincia, usuarioEN.Imagen, true);
+                                usuarioCEN.CambiarDatos (usuarioEN.Nick, usuarioEN.Pass, usuarioEN.Nombre, usuarioEN.Apellidos, usuarioEN.Correo, usuarioEN.FechaNa, usuarioEN.Sexo, usuarioEN.Pais, usuarioEN.Provincia, usuarioEN.Imagen, true, usuarioEN.Logeado);
                         }
                         else{
-                                usuarioCEN.CambiarDatos (usuarioEN.Nick, usuarioEN.Pass, usuarioEN.Nombre, usuarioEN.Apellidos, usuarioEN.Correo, usuarioEN.FechaNa, usuarioEN.Sexo, usuarioEN.Pais, usuarioEN.Provincia, usuarioEN.Imagen, false);
+                                usuarioCEN.CambiarDatos (usuarioEN.Nick, usuarioEN.Pass, usuarioEN.Nombre, usuarioEN.Apellidos, usuarioEN.Correo, usuarioEN.FechaNa, usuarioEN.Sexo, usuarioEN.Pais, usuarioEN.Provincia, usuarioEN.Imagen, false, usuarioEN.Logeado);
                         }
                 }
 
