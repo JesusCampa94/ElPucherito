@@ -122,6 +122,9 @@ public void ModifyDefault (UsuarioEN usuario)
 
 
 
+
+                usuarioEN.Logeado = usuario.Logeado;
+
                 session.Update (usuarioEN);
                 SessionCommit ();
         }
@@ -202,6 +205,9 @@ public void CambiarDatos (UsuarioEN usuario)
 
 
                 usuarioEN.Baneado = usuario.Baneado;
+
+
+                usuarioEN.Logeado = usuario.Logeado;
 
                 session.Update (usuarioEN);
                 SessionCommit ();

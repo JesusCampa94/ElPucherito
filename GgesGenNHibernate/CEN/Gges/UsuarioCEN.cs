@@ -38,7 +38,7 @@ public IUsuarioCAD get_IUsuarioCAD ()
         return this._IUsuarioCAD;
 }
 
-public string CrearUsuario (string p_nick, string p_pass, string p_nombre, string p_apellidos, string p_correo, Nullable<DateTime> p_fechaNa, int p_sexo, string p_pais, string p_provincia, string p_imagen, bool p_baneado)
+public string CrearUsuario (string p_nick, string p_pass, string p_nombre, string p_apellidos, string p_correo, Nullable<DateTime> p_fechaNa, int p_sexo, string p_pais, string p_provincia, string p_imagen, bool p_baneado, bool p_logeado)
 {
         UsuarioEN usuarioEN = null;
         string oid;
@@ -67,13 +67,15 @@ public string CrearUsuario (string p_nick, string p_pass, string p_nombre, strin
 
         usuarioEN.Baneado = p_baneado;
 
+        usuarioEN.Logeado = p_logeado;
+
         //Call to UsuarioCAD
 
         oid = _IUsuarioCAD.CrearUsuario (usuarioEN);
         return oid;
 }
 
-public void CambiarDatos (string p_Usuario_OID, string p_pass, string p_nombre, string p_apellidos, string p_correo, Nullable<DateTime> p_fechaNa, int p_sexo, string p_pais, string p_provincia, string p_imagen, bool p_baneado)
+public void CambiarDatos (string p_Usuario_OID, string p_pass, string p_nombre, string p_apellidos, string p_correo, Nullable<DateTime> p_fechaNa, int p_sexo, string p_pais, string p_provincia, string p_imagen, bool p_baneado, bool p_logeado)
 {
         UsuarioEN usuarioEN = null;
 
@@ -90,6 +92,7 @@ public void CambiarDatos (string p_Usuario_OID, string p_pass, string p_nombre, 
         usuarioEN.Provincia = p_provincia;
         usuarioEN.Imagen = p_imagen;
         usuarioEN.Baneado = p_baneado;
+        usuarioEN.Logeado = p_logeado;
         //Call to UsuarioCAD
 
         _IUsuarioCAD.CambiarDatos (usuarioEN);
