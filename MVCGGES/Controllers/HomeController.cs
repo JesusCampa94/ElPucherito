@@ -17,7 +17,6 @@ namespace MVCGGES.Controllers
             IList<PublicacionEN> lista = publ.ReadAllDefault(0, -1).ToList();
             SessionClose();
             return View(lista);
-<<<<<<< HEAD
         }
 
         public ActionResult Preguntas()
@@ -25,8 +24,6 @@ namespace MVCGGES.Controllers
             ViewBag.Message = "Comprueba tus dudas con las del resto de usuarios.";
 
             return View();
-=======
->>>>>>> origin/master
         }
 
         public ActionResult About()
