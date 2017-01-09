@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GgesGenNHibernate.EN.Gges.RecetaEN>
+
+@{
+    ViewBag.Title = "Recetas";
+}
+
+<div class="jumbotron">
+    <h1>EL PUCHERITO</h1>
+    <h2>Recetas</h2>
+    <p>Mostrar: <a href="http://localhost:60313/Home/Index">Todo</a> | <a href="http://localhost:60313/Home/Noticias">Noticias</a> | <a href="http://localhost:60313/Home/Eventos">Eventos</a> | <a href="http://localhost:60313/Home/Recetas">Recetas</a> | <a href="http://localhost:60313/Home/Entrevistas">Entrevistas</a></p>
+</div>
+
+@for (var i = 0; i < Model.Count(); i = i + 2)
+{
+    <div class="row">
+
+        @{var item = Model.ElementAt(i); }
+
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+            <p>
+                @Html.DisplayFor(modelItem => item.Contenido)
+            </p>
+            <p><a class="btn btn-default" href="">Ver más</a></p>
+        </div>
+
+        @{if (i != Model.Count() - 1) //Por si el numero de objetos es impar
+            {
+                item = Model.ElementAt(i + 1);
+
+                <div class="col-md-6">
+                    <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Contenido)
+                    </p>
+                    <p><a class="btn btn-default" href="">Ver más</a></p>
+                </div>
+            }
+        }
+    </div>
+            }
+

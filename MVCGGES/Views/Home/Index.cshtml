@@ -1,31 +1,79 @@
-﻿@{
+﻿@model IEnumerable<GgesGenNHibernate.EN.Gges.PublicacionEN>
+
+@{
     ViewBag.Title = "Home Page";
 }
-
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>EL PUCHERITO</h1>
+    <p>Mostrar: <a href="http://localhost:60313/Home/Index">Todo</a> | <a href="http://localhost:60313/Home/Noticias">Noticias</a> | <a href="http://localhost:60313/Home/Eventos">Eventos</a> | <a href="http://localhost:60313/Home/Recetas">Recetas</a> | <a href="http://localhost:60313/Home/Entrevistas">Entrevistas</a></p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+@for (var i = 0; i < Model.Count(); i = i + 2)
+{
+    <div class="row">
+        @{
+            var tipoItem1 = Model.ElementAt(i).GetType().ToString();
+            var item = Model.ElementAt(i);
+            var cadenaURL = "";
+            if(tipoItem1.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Noticia/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.RecetaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Receta/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.EntrevistaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Entrevista/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.EventoEN"))
+            {
+                cadenaURL = "http://localhost:60313/Evento/Details/";
+            }
+            cadenaURL = cadenaURL + item.Id;
+         }
+
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+            <p>
+                @Html.DisplayFor(modelItem => item.Contenido)
+            </p>
+            <p><a class="btn btn-default" href="@cadenaURL">Ver más</a></p>
+        </div>
+        
+        @{if (i != Model.Count() - 1) //Por si el numero de objetos es impar
+            {
+                var tipoItem2 = Model.ElementAt(i+1).GetType().ToString();
+                item = Model.ElementAt(i + 1);
+                var cadenaURL2 = "";
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Noticia/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.RecetaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Receta/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.EntrevistaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Entrevista/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.EventoEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Evento/Details/";
+                }
+                cadenaURL2 = cadenaURL2 + item.Id;
+
+                <div class="col-md-6">
+                    <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Contenido)
+                    </p>
+                    <p><a class="btn btn-default" href="@cadenaURL2">Ver más</a></p>
+                </div>
+            }
+        }
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+}
+

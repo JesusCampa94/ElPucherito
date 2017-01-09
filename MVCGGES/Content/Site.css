@@ -1,13 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+﻿/*Ajustes generales*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -19,6 +10,81 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
-textarea {
+textarea
+{
     max-width: 280px;
 }
+
+
+body
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    color: #263238;
+}
+
+
+    .navbar
+    {
+        border: none;
+        background: #009688;
+    }
+
+        .navbar a
+        {
+            display:  block;
+            color: #ECEFF1 !important;
+        }
+        .navbar a:hover
+        {
+            color: #B0BEC5;
+        }
+
+
+
+    /* Set padding to keep content from hitting the edges */
+    .body-content
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+        .jumbotron
+        {
+            border-radius: 0px !important;
+            background: #E0F2F1;
+        }
+
+        a, a:hover
+        {
+            color: #009688;
+        }
+
+        /*Tablas*/
+        tr, th, td
+        {
+            border: none !important;
+        }
+
+            th
+            {
+                background: #009688;
+                color: #ECEFF1;
+            }
+
+            tr:nth-child(even) td
+            {
+                background: #E0F2F1;
+            }
+
+            tr:nth-child(odd) td
+            {
+                background: #B2DFDB;
+            }
+
+        hr
+        {
+            border-top: 1px solid #009688;
+        }
+

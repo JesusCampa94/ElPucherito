@@ -92,7 +92,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <select name="Sexo" id="Sexo">
+                <select data-val="true" data-val-number="El campo Sexo debe ser un número." data-val-required="El campo Sexo es obligatorio." name="Sexo" id="Sexo">
                     <option value="0">Otro</option>
                     <option value="1">Hombre</option>
                     <option value="2">Mujer</option>

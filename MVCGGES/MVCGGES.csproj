@@ -339,6 +339,10 @@
     <Content Include="Views\Entrevista\Create.cshtml" />
     <Content Include="Views\Entrevista\Edit.cshtml" />
     <Content Include="Views\Entrevista\Delete.cshtml" />
+    <Content Include="Views\Home\Entrevistas.cshtml" />
+    <Content Include="Views\Home\Eventos.cshtml" />
+    <Content Include="Views\Home\Noticias.cshtml" />
+    <Content Include="Views\Home\Recetas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

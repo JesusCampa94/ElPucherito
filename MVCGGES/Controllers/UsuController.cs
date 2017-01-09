@@ -57,20 +57,20 @@ namespace MVCGGES.Controllers
                 usuario.Nombre = datosRegistro.Nombre;
                 usuario.Apellidos = datosRegistro.Apellidos;
                 usuario.Correo = datosRegistro.Email;
+                usuario.FechaNa = datosRegistro.FechaNa;
                 usuario.Sexo = datosRegistro.Sexo;
-                //usuario.Sexo = 0;
                 usuario.Pais = datosRegistro.Pais;
                 usuario.Provincia = datosRegistro.Provincia;
                 usuario.Imagen = datosRegistro.Imagen;
 
                 //Valores por defecto de campos opcionales
-                if (datosRegistro.Imagen == "")
+                if (datosRegistro.Imagen == null)
                     usuario.Imagen = "imagen.jpg";
 
-                if (datosRegistro.Pais == "")
+                if (datosRegistro.Pais == null)
                     usuario.Pais = "No especificado";
 
-                if (datosRegistro.Provincia == "")
+                if (datosRegistro.Provincia == null)
                     usuario.Provincia = "No especificada";
                 
                 //Valores que no introduce el usuario
