@@ -11,15 +11,11 @@
 @for (var i = 0; i < Model.Count(); i = i + 2)
 {
     <div class="row">
-<<<<<<< HEAD
-
-        @{var item = Model.ElementAt(i); }
-=======
         @{
             var tipoItem1 = Model.ElementAt(i).GetType().ToString();
             var item = Model.ElementAt(i);
             var cadenaURL = "";
-            if(tipoItem1.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
             {
                 cadenaURL = "http://localhost:60313/Noticia/Details/";
             }
@@ -36,28 +32,19 @@
                 cadenaURL = "http://localhost:60313/Evento/Details/";
             }
             cadenaURL = cadenaURL + item.Id;
-         }
->>>>>>> origin/master
+        }
 
         <div class="col-md-6">
             <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
             <p>
                 @Html.DisplayFor(modelItem => item.Contenido)
             </p>
-<<<<<<< HEAD
-            <p><a class="btn btn-default" href="http://localhost:60313/Home/">Ver más</a></p>
+            <p><a class="btn btn-default" href="@cadenaURL">Ver más</a></p>
         </div>
 
         @{if (i != Model.Count() - 1) //Por si el numero de objetos es impar
             {
-                item = Model.ElementAt(i + 1);
-=======
-            <p><a class="btn btn-default" href="@cadenaURL">Ver más</a></p>
-        </div>
-        
-        @{if (i != Model.Count() - 1) //Por si el numero de objetos es impar
-            {
-                var tipoItem2 = Model.ElementAt(i+1).GetType().ToString();
+                var tipoItem2 = Model.ElementAt(i + 1).GetType().ToString();
                 item = Model.ElementAt(i + 1);
                 var cadenaURL2 = "";
                 if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
@@ -77,33 +64,15 @@
                     cadenaURL2 = "http://localhost:60313/Evento/Details/";
                 }
                 cadenaURL2 = cadenaURL2 + item.Id;
->>>>>>> origin/master
 
                 <div class="col-md-6">
                     <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
                     <p>
                         @Html.DisplayFor(modelItem => item.Contenido)
                     </p>
-<<<<<<< HEAD
-                    <p><a class="btn btn-default" href="">Ver más</a></p>
-                </div>
-            }
-        }
-    </div>
-}
-
-=======
                     <p><a class="btn btn-default" href="@cadenaURL2">Ver más</a></p>
                 </div>
             }
         }
     </div>
-}
-
-    <div class="col-md-4">
-        <h2>Lista de noticias</h2>
-        <p>Encontraras una lista con las ultimas noticias.</p>
-        <p><a class="btn btn-default" href="http://localhost:60313/Noticia/Index">Ir a &raquo;</a></p>
-    </div>
-</div>
->>>>>>> origin/master
+            }

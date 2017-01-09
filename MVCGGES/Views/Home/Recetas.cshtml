@@ -14,26 +14,66 @@
 {
     <div class="row">
 
-        @{var item = Model.ElementAt(i); }
+        @{
+            var tipoItem1 = Model.ElementAt(i).GetType().ToString();
+            var item = Model.ElementAt(i);
+            var cadenaURL = "";
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Noticia/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.RecetaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Receta/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.EntrevistaEN"))
+            {
+                cadenaURL = "http://localhost:60313/Entrevista/Details/";
+            }
+            if (tipoItem1.Equals("GgesGenNHibernate.EN.Gges.EventoEN"))
+            {
+                cadenaURL = "http://localhost:60313/Evento/Details/";
+            }
+            cadenaURL = cadenaURL + item.Id;
+        }
 
         <div class="col-md-6">
             <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
             <p>
                 @Html.DisplayFor(modelItem => item.Contenido)
             </p>
-            <p><a class="btn btn-default" href="">Ver más</a></p>
+            <p><a class="btn btn-default" href="@cadenaURL">Ver más</a></p>
         </div>
 
         @{if (i != Model.Count() - 1) //Por si el numero de objetos es impar
             {
+                var tipoItem2 = Model.ElementAt(i + 1).GetType().ToString();
                 item = Model.ElementAt(i + 1);
+                var cadenaURL2 = "";
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.NoticiaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Noticia/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.RecetaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Receta/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.EntrevistaEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Entrevista/Details/";
+                }
+                if (tipoItem2.Equals("GgesGenNHibernate.EN.Gges.EventoEN"))
+                {
+                    cadenaURL2 = "http://localhost:60313/Evento/Details/";
+                }
+                cadenaURL2 = cadenaURL2 + item.Id;
 
                 <div class="col-md-6">
                     <h2>@Html.DisplayFor(modelItem => item.Titulo)</h2>
                     <p>
                         @Html.DisplayFor(modelItem => item.Contenido)
                     </p>
-                    <p><a class="btn btn-default" href="">Ver más</a></p>
+                    <p><a class="btn btn-default" href="@cadenaURL2">Ver más</a></p>
                 </div>
             }
         }
