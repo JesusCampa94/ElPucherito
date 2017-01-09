@@ -68,8 +68,8 @@
                     new SelectList(new List<Object>
                 {
                     new {value = 0, text = "Otro"},
-                    new {value = 1, text = "Mujer"},
-                    new {value = 2, text = "Hombre"}   
+                    new {value = 1, text = "Hombre"},
+                    new {value = 2, text = "Mujer"}   
                 }, "value", "text", Model.Sexo))
                 @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
             </div>

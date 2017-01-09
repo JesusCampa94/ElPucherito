@@ -97,7 +97,7 @@ namespace MVCGGES.Models
         [Display(Name = "Fecha de nacimiento")]
         public System.DateTime FechaNa { get; set; }
 
-        [Required]
+        
         [Display(Name = "Sexo")]
         public int Sexo { get; set; }
 
