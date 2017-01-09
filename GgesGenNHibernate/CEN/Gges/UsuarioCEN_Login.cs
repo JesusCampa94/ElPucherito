@@ -39,7 +39,10 @@ public bool Login (string usuario, String pass)
                 }
 
                 if (usuarioEN.Pass == pass)
-                        login = true;
+                {
+                    login = true;
+                    usuarioEN.Logeado = true;
+                }
         }
         return login;
 

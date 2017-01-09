@@ -96,6 +96,13 @@ private System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.ComentarioEN>
 
 
 
+/**
+ *	Atributo logeado
+ */
+private bool logeado;
+
+
+
 
 
 
@@ -177,6 +184,12 @@ public virtual System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.Coment
 
 
 
+public virtual bool Logeado {
+        get { return logeado; } set { logeado = value;  }
+}
+
+
+
 
 
 public UsuarioEN()
@@ -187,20 +200,20 @@ public UsuarioEN()
 
 
 
-public UsuarioEN(string nick, string pass, string nombre, string apellidos, string correo, Nullable<DateTime> fechaNa, int sexo, string pais, string provincia, string imagen, bool baneado, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.PublicacionEN> publicacion, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.ComentarioEN> comentario
+public UsuarioEN(string nick, string pass, string nombre, string apellidos, string correo, Nullable<DateTime> fechaNa, int sexo, string pais, string provincia, string imagen, bool baneado, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.PublicacionEN> publicacion, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.ComentarioEN> comentario, bool logeado
                  )
 {
-        this.init (Nick, pass, nombre, apellidos, correo, fechaNa, sexo, pais, provincia, imagen, baneado, publicacion, comentario);
+        this.init (Nick, pass, nombre, apellidos, correo, fechaNa, sexo, pais, provincia, imagen, baneado, publicacion, comentario, logeado);
 }
 
 
 public UsuarioEN(UsuarioEN usuario)
 {
-        this.init (Nick, usuario.Pass, usuario.Nombre, usuario.Apellidos, usuario.Correo, usuario.FechaNa, usuario.Sexo, usuario.Pais, usuario.Provincia, usuario.Imagen, usuario.Baneado, usuario.Publicacion, usuario.Comentario);
+        this.init (Nick, usuario.Pass, usuario.Nombre, usuario.Apellidos, usuario.Correo, usuario.FechaNa, usuario.Sexo, usuario.Pais, usuario.Provincia, usuario.Imagen, usuario.Baneado, usuario.Publicacion, usuario.Comentario, usuario.Logeado);
 }
 
 private void init (string nick
-                   , string pass, string nombre, string apellidos, string correo, Nullable<DateTime> fechaNa, int sexo, string pais, string provincia, string imagen, bool baneado, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.PublicacionEN> publicacion, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.ComentarioEN> comentario)
+                   , string pass, string nombre, string apellidos, string correo, Nullable<DateTime> fechaNa, int sexo, string pais, string provincia, string imagen, bool baneado, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.PublicacionEN> publicacion, System.Collections.Generic.IList<GgesGenNHibernate.EN.Gges.ComentarioEN> comentario, bool logeado)
 {
         this.Nick = nick;
 
@@ -228,6 +241,8 @@ private void init (string nick
         this.Publicacion = publicacion;
 
         this.Comentario = comentario;
+
+        this.Logeado = logeado;
 }
 
 public override bool Equals (object obj)
