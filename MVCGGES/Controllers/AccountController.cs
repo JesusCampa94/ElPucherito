@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVCGGES.Models;
+using GgesGenNHibernate.CAD.Gges;
+using GgesGenNHibernate.EN.Gges;
 
 namespace MVCGGES.Controllers
 {
@@ -151,12 +153,30 @@ namespace MVCGGES.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                UsuarioCAD cad = new UsuarioCAD();
+                UsuarioEN en = new UsuarioEN();
+
+                //Creamos el nuevo usuario con los datos obtenidos
+                en.Nick = model.Nick;
+                en.Pass = model.Password;
+                en.Nombre = model.Nombre;
+                en.Apellidos = model.Apellidos;
+                en.Correo = model.Email;
+                en.Sexo = 0;
+                en.FechaNa = System.DateTime.Today;
+                en.Pais = model.Pais;
+                en.Provincia = model.Provincia;
+                en.Imagen = model.Imagen;
+                en.Baneado = false;
+
+                cad.CrearUsuario(en);
+
+                var user = new ApplicationUser { UserName = model.Nick, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // Para obtener más información sobre cómo habilitar la confirmación de cuenta y el restablecimiento de contraseña, visite http://go.microsoft.com/fwlink/?LinkID=320771
                     // Enviar correo electrónico con este vínculo
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

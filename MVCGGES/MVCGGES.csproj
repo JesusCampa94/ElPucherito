@@ -226,9 +226,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BasicController.cs" />
+    <Compile Include="Controllers\ComentarioController.cs" />
     <Compile Include="Controllers\EntrevistaController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredienteController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\RecetaController.cs" />
@@ -345,6 +347,21 @@
     <Content Include="Views\Admin\Details.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Home\Entrevistas.cshtml" />
+    <Content Include="Views\Home\Eventos.cshtml" />
+    <Content Include="Views\Home\Noticias.cshtml" />
+    <Content Include="Views\Home\Recetas.cshtml" />
+    <Content Include="Views\Comentario\Create.cshtml" />
+    <Content Include="Views\Comentario\Delete.cshtml" />
+    <Content Include="Views\Comentario\Details.cshtml" />
+    <Content Include="Views\Comentario\Edit.cshtml" />
+    <Content Include="Views\Comentario\Index.cshtml" />
+    <Content Include="Views\Ingrediente\Create.cshtml" />
+    <Content Include="Views\Ingrediente\Delete.cshtml" />
+    <Content Include="Views\Ingrediente\Details.cshtml" />
+    <Content Include="Views\Ingrediente\Edit.cshtml" />
+    <Content Include="Views\Ingrediente\Index.cshtml" />
+    <Content Include="Views\Home\Preguntas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

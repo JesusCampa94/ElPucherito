@@ -110,6 +110,8 @@ namespace MVCGGES.Models
         public string Imagen { get; set; }
 
         public bool Baneado { get; set; }
+
+        public bool Logueado { get; set; }
     }
 
     public class ResetPasswordViewModel
